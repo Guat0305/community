@@ -53,7 +53,7 @@ public class LikeService {
     public int findUserLikeCount(int userId) {
         String userLikeKey = RedisKeyUtil.getUserLikeKey(userId);
         Integer count = (Integer) redisTemplate.opsForValue().get(userLikeKey);
-        return count == null ? 0 :count.intValue();
+        return count == null ? 0 : count.intValue();
     }
 
 }

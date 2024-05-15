@@ -28,9 +28,8 @@ public class SensitiveFilter {
     @PostConstruct
     public void init() {
         try (
-                InputStream is = this.getClass().getClassLoader().getResourceAsStream("sensitive" +
-                        "-words" +
-                        ".txt");
+                InputStream is = this.getClass().getClassLoader()
+                        .getResourceAsStream("sensitive-words.txt");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         ) {
             String keyword;
@@ -65,8 +64,8 @@ public class SensitiveFilter {
 
     /**
      * 过滤敏感词
-     * @param text 要过滤的文本
-     * @return 过滤后的文本
+     *  text 要过滤的文本
+     * 返回过滤后的文本
      */
     public String filter(String text) {
         if(StringUtils.isBlank(text)) {

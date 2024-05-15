@@ -8,6 +8,10 @@ import java.util.UUID;
 
 public class CommunityUtil {
 
+    public static void main(String[] args) {
+        System.out.println(md5("123456" + "18afe"));
+    }
+
     //  生成随机字符串
     public static String generateUUID(){
         return UUID.randomUUID().toString().replaceAll("-","");
