@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.nowcoder.community.dao.DiscussPostMapper">
+<mapper namespace="com.school.community.dao.DiscussPostMapper">
 
     <sql id="selectFields">
         id,user_id,title,content,type,status,create_time,comment_count,score
@@ -47,7 +47,7 @@
         from discuss_post
         where id = #{id}
     </select>
-    <select id="selectAll" resultType="com.nowcoder.community.entity.DiscussPost">
+    <select id="selectAll" resultType="com.school.community.entity.DiscussPost">
         select * from discuss_post
     </select>
 
